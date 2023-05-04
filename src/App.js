@@ -1,23 +1,26 @@
-import React, { useRef, useEffect } from "react";
+import React, { useState } from "react";
+import Box from "./Box";
 
-const App = () => {
-  const inputRef = useRef();
+function App() {
+  const [size, setSizes] = useState(100);
 
-  useEffect(() => {
-    // console.log(inputRef);
-    inputRef.current.focus();
-  }, []);
-
-  const login = () => {
-    alert(`환영합니다 ${inputRef.current.value}`);
-    inputRef.current.focus();
+  const createBoxStyle = () => {
+    return {
+      backgroundColor: "pink",
+      width: `${size}px`,
+      height: `${size}px`,
+    };
   };
-
   return (
     <>
-      <input ref={inputRef} type="text" placeholder="username"></input>
-      <button onClick={login}>로그인</button>
+      <input
+        type="number"
+        value={size}
+        onChange={(e) => setSizes(e.target.value)}
+      />
+      <Box createBoxStyle={createBoxStyle} />
     </>
   );
-};
+}
+
 export default App;
