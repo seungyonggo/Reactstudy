@@ -1,18 +1,39 @@
-import React, { useState } from "react";
+import React from "react";
+import Callback1 from "./component/App_useCallback1";
+import Callback2 from "./component/App_useCallback2";
+import Context1 from "./component/App_usecontext";
+import Effect1 from "./component/App_useEffect1";
+import Effect2 from "./component/App_useEffect2";
+import Memo1 from "./component/App_useMemo";
+import Memo2 from "./component/App_useMemo2";
+import Ref1 from "./component/App_useRef";
+import State from "./component/App_useState";
+import Custom from "./component/App_custom1";
 
 function App() {
-  const [inputValue, setInputValue] = useState("");
-
-  const handleChange = (e) => {
-    setInputValue(e.target.value);
-  };
-
   return (
     <div>
-      <h1>useInput</h1>
-      <input value={inputValue} onChange={handleChange} />
-      <button>확인</button>
+      <State />
+      <hr />
+      <Ref1 />
+      <hr />
+      <Callback1 />
+      <hr />
+      <Callback2 />
+      <hr />
+      <Memo1 />
+      <hr />
+      <Memo2 />
+      <hr />
+      <Effect1 />
+      <hr />
+      <Effect2 />
+      <hr />
+      <Context1 />
+      <hr />
+      <Custom />
     </div>
   );
 }
+
 export default App;
