@@ -1,7 +1,7 @@
 import React from "react";
 import Callback1 from "./component/App_useCallback1";
 import Callback2 from "./component/App_useCallback2";
-import Context1 from "./component/App_usecontext";
+import Context2 from "./component/App_usecontext2";
 import Effect1 from "./component/App_useEffect1";
 import Effect2 from "./component/App_useEffect2";
 import Memo1 from "./component/App_useMemo";
@@ -9,6 +9,8 @@ import Memo2 from "./component/App_useMemo2";
 import Ref1 from "./component/App_useRef";
 import State from "./component/App_useState";
 import Custom from "./component/App_custom1";
+import Context1 from "./component/App_usecontext1";
+import Custom1 from "./component/App_custom1";
 
 function App() {
   return (
@@ -31,7 +33,9 @@ function App() {
       <hr />
       <Context1 />
       <hr />
-      <Custom />
+      <Context2 />
+      <hr />
+      <Custom1 />
     </div>
   );
 }

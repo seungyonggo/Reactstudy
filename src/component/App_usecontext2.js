@@ -1,7 +1,7 @@
 import { useCallback, useMemo, useState } from "react";
 import Child from "../Child";
 
-function Context1() {
+function Context2() {
   const [parentAge, setParentAge] = useState(0);
 
   const incrementParentAge = () => {
@@ -25,4 +25,4 @@ function Context1() {
   );
 }
 
-export default Context1;
+export default Context2;
