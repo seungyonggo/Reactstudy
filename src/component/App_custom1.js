@@ -4,7 +4,7 @@ function displayMessage(message) {
   alert(message);
 }
 
-function Custom() {
+function Custom1() {
   const [inputValue, handleChange, handleSubmit] = useInput("", displayMessage);
 
   return (
@@ -16,4 +16,4 @@ function Custom() {
   );
 }
 
-export default Custom;
+export default Custom1;
